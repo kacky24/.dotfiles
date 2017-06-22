@@ -68,6 +68,9 @@ noremap : ;
 nnoremap j gj
 nnoremap k gk
 nnoremap Y y$
+" ビープ音を消す
+set vb t_vb=
+set noerrorbells
 
 "syntax on
 
