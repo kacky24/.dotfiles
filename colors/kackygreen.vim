@@ -647,7 +647,7 @@ call s:HL('pythonRepeat',      'lime', '', 'none')
 call s:HL('pythonConditional', 'lime', '', 'none')
 call s:HL('pythonString',      'molokai_string', '', 'none')
 call s:HL('pythonQuotes',      'lightgravel', '', 'none')
-""call s:HL('pythonNumber',      'green', '', 'none')
+call s:HL('pythonSelf',        'lime', '', 'none')
 call s:HL('pythonStatement',   'green', '', 'none')
  
 
