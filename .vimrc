@@ -81,7 +81,7 @@ filetype indent on
 syntax on
 
 set t_Co=256
-colorscheme badwolf
+colorscheme kackygreen
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 "copy & pasteに関する設定
