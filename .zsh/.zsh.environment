@@ -1,0 +1,17 @@
+# 環境変数の設定
+export EDITOR='vim'
+export SHELL='zsh'
+export TERM=xterm-256color
+
+# basic path
+export PATH="$HOME/local/bin(N-/):$PATH"
+export PATH="$HOME/local/share(N-/):$PATH"
+export PATH="$HOME/local/include(N-/):$PATH"
+export LD_LIBRARY_PATH="$HOME/local/lib(N-/):$LD_LIBRARY_PATHi"
+export LD_LIBRARY_PATH="$HOME/local/lib64(N-/):$LD_LIBRARY_PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
