@@ -68,6 +68,9 @@ noremap : ;
 nnoremap j gj
 nnoremap k gk
 nnoremap Y y$
+" ビープ音を消す
+set vb t_vb=
+set noerrorbells
 
 "syntax on
 
@@ -78,7 +81,7 @@ filetype indent on
 syntax on
 
 set t_Co=256
-colorscheme badwolf
+colorscheme kackygreen
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 "copy & pasteに関する設定
