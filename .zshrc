@@ -33,6 +33,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # 補完でcolorを使用
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 
+# lsでcolorを使用
+alias ls="ls -GF"
+
 # ディレクトリ名を補完すると，末尾がスラッシュ
 setopt AUTO_PARAM_SLASH
 

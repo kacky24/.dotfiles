@@ -1,6 +1,6 @@
 # 環境変数の設定
 export EDITOR='vim'
-export SHELL='zsh'
+export SHELL='/bin/zsh'
 export TERM=xterm-256color
 
 # basic path
