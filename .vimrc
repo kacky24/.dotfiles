@@ -97,3 +97,5 @@ set viminfo='50,\"3000,:0,n~/.viminfo
 "nerdtree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+"syntax check
+let g:syntastic_python_checkers = ['flake8']
