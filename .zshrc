@@ -34,7 +34,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 
 # lsでcolorを使用
-alias ls='ls --color=auto'
+alias ls='ls -G'
 
 # ディレクトリ名を補完すると，末尾がスラッシュ
 setopt AUTO_PARAM_SLASH
