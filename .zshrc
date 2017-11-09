@@ -33,17 +33,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # 補完でcolorを使用
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 
-# lsでcolorを使用等
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+# lsでcolorを使用
+alias ls='ls --color=auto'
 
 # ディレクトリ名を補完すると，末尾がスラッシュ
 setopt AUTO_PARAM_SLASH
