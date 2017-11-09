@@ -18,4 +18,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # node.js
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
->>>>>>> 5ce85df0b3b1be15be7a8f698e9fa952a314171b
+
+# cuda
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
