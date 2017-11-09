@@ -33,6 +33,13 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # 補完でcolorを使用
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 
+# lsでcolorを使用
+if [ "$(uname)" = 'Darwin' ]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
+
 # ディレクトリ名を補完すると，末尾がスラッシュ
 setopt AUTO_PARAM_SLASH
 

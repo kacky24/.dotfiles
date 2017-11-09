@@ -1,14 +1,14 @@
 # 環境変数の設定
-export EDITOR='vim'
-export SHELL='zsh'
+export editor='vim'
+export SHELL='/bin/zsh'
 export TERM=xterm-256color
 
 # basic path
-export PATH="$HOME/local/bin(N-/):$PATH"
-export PATH="$HOME/local/share(N-/):$PATH"
-export PATH="$HOME/local/include(N-/):$PATH"
-export LD_LIBRARY_PATH="$HOME/local/lib(N-/):$LD_LIBRARY_PATHi"
-export LD_LIBRARY_PATH="$HOME/local/lib64(N-/):$LD_LIBRARY_PATH"
+export PATH="$HOME/local/bin:$PATH"
+export PATH="$HOME/local/share:$PATH"
+export PATH="$HOME/local/include:$PATH"
+export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATHi"
+export LD_LIBRARY_PATH="$HOME/local/lib64:$LD_LIBRARY_PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -16,5 +16,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# cuda
-export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+# node.js
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
+>>>>>>> 5ce85df0b3b1be15be7a8f698e9fa952a314171b
