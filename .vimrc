@@ -97,5 +97,13 @@ set viminfo='50,\"3000,:0,n~/.viminfo
 "nerdtree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+"jedi-vim
+"docstring表示しない
+autocmd FileType python setlocal completeopt-=preview
+
 "syntax check
 let g:syntastic_python_checkers = ['flake8']
+
+"supertab
+let g:SuperTabContextDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "<c-n>"
