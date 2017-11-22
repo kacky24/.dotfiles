@@ -21,3 +21,7 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 # cuda
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+
+# tmux (cyber))
+export PATH="$HOME/.opt/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.opt/lib:$LD_LIBRARY_PATH"
