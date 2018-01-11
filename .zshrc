@@ -64,3 +64,9 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # 余分な余白は詰めて記録
 setopt hist_reduce_blanks
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/kakiuchi/google-cloud-sdk/path.zsh.inc' ]; then source '/home/kakiuchi/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/kakiuchi/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/kakiuchi/google-cloud-sdk/completion.zsh.inc'; fi

@@ -64,6 +64,8 @@ inoremap ' ''<Left>
 inoremap [ []<Left>
 noremap ; :
 noremap : ;
+inoremap ; :
+inoremap : ;
 " j, k による移動を折り返されたテキストでも自然に振る舞うように変更
 nnoremap j gj
 nnoremap k gk
