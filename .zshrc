@@ -31,6 +31,9 @@ zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # 補完でcolorを使用
+if [ "$(uname)" = 'Darwin' ]; then
+    export LSCOLORS=gxfxcxdxbxegedabagacad
+fi
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 
 # lsでcolorを使用
