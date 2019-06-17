@@ -74,13 +74,11 @@ nnoremap Y y$
 set vb t_vb=
 set noerrorbells
 
-"syntax on
-
 filetype off
 
 filetype plugin indent on     " required!
 filetype indent on
-syntax on
+syntax enable
 
 set t_Co=256
 colorscheme kackygreen
