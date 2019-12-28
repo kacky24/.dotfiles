@@ -1,3 +1,3 @@
 # dotfiles
-sh init.sh
+sh init.sh <br>
 sh dotfilesLink.sh
