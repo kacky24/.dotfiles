@@ -36,6 +36,8 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
 ##########editor##########
+alias vim='nvim'
+
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
