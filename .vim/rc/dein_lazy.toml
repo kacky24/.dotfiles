@@ -1,7 +1,8 @@
-[[plugins]]
-repo   = 'Shougo/unite.vim'
+[[plugins]]  
+repo = 'junegunn/fzf'  
+build = './install --bin'  
+merged = '0'
 
-# unite.vim を読み込んだら一緒に読み込む
-[[plugins]]
-repo      = 'Shougo/neomru.vim'
-on_source = ['unite.vim']
+[[plugins]]  
+repo = 'junegunn/fzf.vim'  
+depends = 'fzf'
