@@ -142,7 +142,7 @@ let g:ale_python_isort_executable = g:python3_host_prog
 let g:ale_python_isort_options = '-m isort'
 let g:ale_python_black_executable = g:python3_host_prog
 let g:ale_python_black_options = '-m black'
-highlight ALEWarningSign guibg=#ffff00 ctermbg=11
+highlight ALEWarningSign guifg=#ffff00 ctermfg=11
 highlight ALEErrorSign guibg=#ff0000 ctermbg=9
 
 "--------------------------------------------------
