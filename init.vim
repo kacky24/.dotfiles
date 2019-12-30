@@ -85,6 +85,8 @@ syntax enable
 
 set termguicolors
 "set t_Co=256
+"let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 colorscheme molokai
 
 "copy & pasteに関する設定
@@ -129,14 +131,19 @@ highlight GitGutterDelete guifg=#ff0000 ctermfg=9
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
-"--------------------------------------------------
-"jedi-vim
-"docstring表示しない
-autocmd FileType python setlocal completeopt-=preview
-
-"--------------------------------------------------
-"syntax check
-let g:syntastic_python_checkers = ['flake8']
+"python
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {'python': ['black', 'isort']}
+let g:ale_python_flake8_executable = g:python3_host_prog
+let g:ale_python_flake8_options = '-m flake8'
+let g:ale_python_autopep8_executable = g:python3_host_prog
+let g:ale_python_autopep8_options = '-m autopep8'
+let g:ale_python_isort_executable = g:python3_host_prog
+let g:ale_python_isort_options = '-m isort'
+let g:ale_python_black_executable = g:python3_host_prog
+let g:ale_python_black_options = '-m black'
+highlight ALEWarningSign guibg=#ffff00 ctermbg=11
+highlight ALEErrorSign guibg=#ff0000 ctermbg=9
 
 "--------------------------------------------------
 "supertab
