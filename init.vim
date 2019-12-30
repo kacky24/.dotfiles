@@ -84,7 +84,7 @@ syntax enable
  
 
 set termguicolors
-set t_Co=256
+"set t_Co=256
 colorscheme molokai
 
 "copy & pasteに関する設定
@@ -101,16 +101,34 @@ set viminfo='50,\"3000,:0,n~/.viminfo
 "--------------------------------------------------
 " python
 "
-let g:python_host_prog = $HOME . '/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = $HOME . '/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = expand('~/.pyenv/versions/neovim2/bin/python')
+let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
 
 "--------------------------------------------------
 "lightline
 let g:lightline = {'colorscheme': 'molokai'}
+
 "--------------------------------------------------
 "nerdtree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+"--------------------------------------------------
+"fzf
+"Historyコマンドのマッピング
+nnoremap <silent><C-p> :History<CR>
+
+"--------------------------------------------------
+"vim-gitgutter
+set updatetime=250
+highlight GitGutterAdd    guifg=#00ff00 ctermfg=46
+highlight GitGutterChange guifg=#ffff00 ctermfg=11
+highlight GitGutterDelete guifg=#ff0000 ctermfg=9
+"--------------------------------------------------
+"ale
+"checkのタイミング
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 0
 "--------------------------------------------------
 "jedi-vim
 "docstring表示しない
