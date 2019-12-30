@@ -17,7 +17,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # node.js
-export PATH="$HOME/.nodebrew/current/bin:$PATH"
+eval "$(nodenv init -)"
 
 # cuda
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"

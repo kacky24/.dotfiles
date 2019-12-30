@@ -107,6 +107,11 @@ let g:python_host_prog = expand('~/.pyenv/versions/neovim2/bin/python')
 let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
 
 "--------------------------------------------------
+" node
+"
+let g:node_host_prog = expand('~/.nodenv/versions/13.2.0/bin/neovim-node-host')
+
+"--------------------------------------------------
 "lightline
 let g:lightline = {'colorscheme': 'molokai'}
 
@@ -131,6 +136,9 @@ highlight GitGutterDelete guifg=#ff0000 ctermfg=9
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
+"color
+highlight ALEWarningSign guifg=#ffff00 ctermfg=11
+highlight ALEErrorSign guibg=#ff0000 ctermbg=9
 "python
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'python': ['black', 'isort']}
@@ -142,8 +150,23 @@ let g:ale_python_isort_executable = g:python3_host_prog
 let g:ale_python_isort_options = '-m isort'
 let g:ale_python_black_executable = g:python3_host_prog
 let g:ale_python_black_options = '-m black'
-highlight ALEWarningSign guifg=#ffff00 ctermfg=11
-highlight ALEErrorSign guibg=#ff0000 ctermbg=9
+
+"--------------------------------------------------
+"coc.nvim
+"
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
 "--------------------------------------------------
 "supertab

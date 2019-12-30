@@ -28,3 +28,8 @@ depends = 'fzf'
 
 [[plugins]]  
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]  
+repo = 'neoclide/coc.nvim'
+merged = 0
+rev = "release"
