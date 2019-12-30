@@ -2,14 +2,29 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo  = 'davidhalter/jedi-vim'
-on_ft = 'python'
-
-[[plugins]]
 repo = 'scrooloose/nerdtree'
+on_cmd = ['NERDTreeToggle']
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
+repo = 'dense-analysis/ale'
 
 [[plugins]]
 repo = 'ervandew/supertab'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]  
+repo = 'junegunn/fzf'  
+build = './install --bin'  
+merged = '0'
+
+[[plugins]]  
+repo = 'junegunn/fzf.vim'  
+depends = 'fzf'
+
+[[plugins]]  
+repo = 'airblade/vim-gitgutter'
