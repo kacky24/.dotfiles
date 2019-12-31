@@ -154,6 +154,7 @@ let g:ale_python_black_options = '-m black'
 "--------------------------------------------------
 "coc.nvim
 "
+"定義元ジャンプの設定
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -167,6 +168,21 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+"tab, shift+tabで候補を上下
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"enterで補完を確定
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+"--------------------------------------------------
+"ultisnips
+"
+"tabがトリガーとならないようにとりあえずshit+ctr+tでマッピング
+let g:UltiSnipsExpandTrigger='<S-C-t>'
+"tab, shift+tabで候補を上下
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 
 "--------------------------------------------------
 "supertab
