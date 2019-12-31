@@ -159,6 +159,9 @@ let g:ale_lint_on_enter = 0
 "color
 highlight ALEWarningSign guifg=#ffff00 ctermfg=11
 highlight ALEErrorSign guibg=#ff0000 ctermbg=9
+"C-k, C-jでエラー箇所へ移動
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 "python
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'python': ['black', 'isort']}
