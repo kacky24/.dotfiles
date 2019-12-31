@@ -16,4 +16,4 @@
 - vim, :CheckHealthで確認
 6. sh init.sh
 7. sh dotfilesLink.sh
-8. vim, :CocInstall coc-python coc-json
+8. vim, :CocInstall coc-python coc-json coc-ultisnips
