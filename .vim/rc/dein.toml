@@ -24,3 +24,9 @@ repo = 'airblade/vim-gitgutter'
 repo = 'neoclide/coc.nvim'
 merged = 0
 rev = "release"
+
+[[plugins]]
+repo = 'SirVer/ultisnips'
+
+[[plugins]]
+repo = 'honza/vim-snippets'
