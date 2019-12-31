@@ -21,18 +21,18 @@
 
 ### vimキーバインドまとめ
 - ale
-  - エラー箇所への移動: <C-j>, <C-k>
+  - エラー箇所への移動: \<C-j>, \<C-k>
   - 自動補正: :ALEFix
 - nerdtree
-  - 開く: <C-e>
-  - 全部更新: <S-r>(選択ノード更新: r))
+  - 開く: \<C-e>
+  - 全部更新: \<S-r>(選択ノード更新: r))
 - fzf
-  - History: <C-p>
+  - History: \<C-p>
 - coc
   - モジュールの定義元ファイルへ移動: gd
   - モジュールのreference一覧: gr
-  - 補完候補の選択の際の移動: <C-j>, <C-k> or <Tab>, <S-Tab>
+  - 補完候補の選択の際の移動: \<C-j>, \<C-k> or \<Tab>, \<S-Tab>
     - ultisnipsによるsnippetsも同じく
 - neoterm
-  - terminal開く: <C-t>
-  - terminal起動時のinsert mode終了: <C-w>
+  - terminal開く: \<C-t>
+  - terminal起動時のinsert mode終了: \<C-w>
