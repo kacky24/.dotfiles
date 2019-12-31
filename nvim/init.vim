@@ -188,3 +188,15 @@ let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 "supertab
 let g:SuperTabContextDefaultCompletionType = "context"
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+"--------------------------------------------------
+"neoterm
+"位置とサイズ
+let g:neoterm_default_mod='belowright'
+let g:neoterm_size=10
+"画面下部にコマンド実行結果が表示
+let g:neoterm_autoscroll=1
+"C-wでターミナル内の挿入モードを抜けてウィンドウ移動
+tnoremap <silent> <C-w> <C-\><C-n><C-w>
+";Tnewのマッピング
+nnoremap <silent><C-t> :Tnew<CR>
