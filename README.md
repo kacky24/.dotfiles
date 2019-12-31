@@ -14,5 +14,6 @@
 - nodenv global 13.2.0
 - npm install --global neovim
 - vim, :CheckHealthで確認
-5. sh init.sh
-6. sh dotfilesLink.sh
+6. sh init.sh
+7. sh dotfilesLink.sh
+8. vim, :CocInstall coc-python coc-json
