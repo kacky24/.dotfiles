@@ -27,7 +27,12 @@
   - 開く: \<C-e>
   - 全部更新: \<S-r>(選択ノード更新: r))
 - fzf
-  - History: \<C-p>
+  - :Files: ,F
+  - :GFiles, git ls-files: ,f
+  - :GFiles?, git status: ,g
+  - :History: ,h
+  - color sheme一覧: ,c
+  - :Rg: ,r
 - coc
   - モジュールの定義元ファイルへ移動: gd
   - モジュールのreference一覧: gr

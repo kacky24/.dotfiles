@@ -141,8 +141,16 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 "--------------------------------------------------
 "fzf
-"Historyコマンドのマッピング
-nnoremap <silent><C-p> :History<CR>
+"各コマンドのマッピング
+nnoremap <silent> ,f :GFiles<CR>
+nnoremap <silent> ,F :Files<CR>
+nnoremap <silent> ,g :GFiles?<CR>
+nnoremap <silent> ,b :Buffers<CR>
+nnoremap <silent> ,l :BLines<CR>
+nnoremap <silent> ,h :History<CR>
+nnoremap <silent> ,m :Mark<CR>
+nnoremap <silent> ,c :Colors<CR>
+nnoremap <silent> ,r :Rg<CR>
 
 "--------------------------------------------------
 "vim-gitgutter
