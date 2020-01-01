@@ -41,3 +41,17 @@ alias vim='nvim'
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
+
+##########color##########
+# 補完でcolorを使用
+if [ "$(uname)" = 'Darwin' ]; then
+    export LSCOLORS=gxfxcxdxbxegedabagacad
+fi
+zstyle ':completion:*' list-colors "${LS_COLORS}"
+
+# lsでcolorを使用
+if [ "$(uname)" = 'Darwin' ]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
