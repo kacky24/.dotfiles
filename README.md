@@ -41,3 +41,14 @@
 - neoterm
   - terminal開く: \<C-t>
   - terminal起動時のinsert mode終了: \<C-w>
+- vim-fugitive
+  - git status: :Gstatus or :G or <Space>gs
+    - カーソルを合わせて-でgit add, resetができる
+    - カーソルを合わせてDで:Gdiffができる
+    - Enterでファイル表示
+  - 今開いているソースをgit add: :Gwrite or <Space>gw
+  - 直前のコミットまで戻る(git checkout filename): :Gread or <Space>gr
+  - git blame: :Gblame or <Space>gb
+  - 変更点を表示: :Gdiff or <Space>gd
+  - git commit: :Gcommit or <Space>gc
+  - 基本的には、:Git ~をgit ~の代わりとして色々なgit処理ができる

@@ -79,7 +79,6 @@ set noerrorbells
 filetype off
 
 filetype plugin indent on     " required!
-filetype indent on
 syntax enable
  
 
@@ -231,3 +230,12 @@ let g:neoterm_autoscroll=1
 tnoremap <silent> <C-w> <C-\><C-n><C-w>
 ";Tnewのマッピング
 nnoremap <silent><C-t> :Tnew<CR>
+
+"--------------------------------------------------
+"vim-fugitive
+nnoremap <silent> <Space>gb :Gblame<CR>
+nnoremap <silent> <Space>gd :Gdiff<CR>
+nnoremap <silent> <Space>gs :Gstatus<CR>
+nnoremap <silent> <Space>gw :Gwrite<CR>
+nnoremap <silent> <Space>gr :Gread<CR>
+nnoremap <silent> <Space>gc :Gcommit<CR>
