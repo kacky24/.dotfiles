@@ -36,3 +36,15 @@ repo = 'honza/vim-snippets'
 
 [[plugins]]
 repo = 'kassio/neoterm'
+
+[[plugins]]  
+repo = 'junegunn/fzf'  
+build = './install --bin'  
+merged = '0'
+
+[[plugins]]  
+repo = 'junegunn/fzf.vim'  
+depends = 'fzf'
+
+[[plugins]]  
+repo = 'tpope/vim-fugitive'
