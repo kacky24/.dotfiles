@@ -104,6 +104,8 @@ set viminfo='50,\"3000,:0,n~/.viminfo
 "
 let g:python_host_prog = expand('~/.pyenv/versions/neovim2/bin/python')
 let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
+"vim-python/python-syntaxによる設定
+"self, clsを色付け
 let g:python_highlight_class_vars = 1
 
 "--------------------------------------------------
