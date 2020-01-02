@@ -38,8 +38,8 @@ bindkey -M menuselect 'l' vi-forward-char
 ##########editor##########
 alias vim='nvim'
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 ##########color##########
