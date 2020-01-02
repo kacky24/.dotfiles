@@ -2,6 +2,10 @@
 repo = 'scrooloose/nerdtree'
 on_cmd = ['NERDTreeToggle']
 
-[[plugins]]  
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+
+[[plugins]]
+repo = 'vim-python/python-syntax'
+on_ft = 'python'

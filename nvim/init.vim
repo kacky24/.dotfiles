@@ -104,6 +104,7 @@ set viminfo='50,\"3000,:0,n~/.viminfo
 "
 let g:python_host_prog = expand('~/.pyenv/versions/neovim2/bin/python')
 let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
+let g:python_highlight_class_vars = 1
 
 "--------------------------------------------------
 " node
