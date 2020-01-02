@@ -152,7 +152,7 @@ function! MyFugitive()
 endfunction
 
 "--------------------------------------------------
-"nerdtree
+"nerdtree, vim-nerdtree-tabs
 nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 
 "--------------------------------------------------
