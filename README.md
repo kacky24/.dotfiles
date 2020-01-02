@@ -12,8 +12,7 @@
 4. nodenvをインストール
 - https://yu8mada.com/2018/08/03/how-to-install-neovim-on-macos-using-homebrew-and-set-it-up-to-make-it-able-to-be-used/#content-4-3
 - nodenv install 13.2.0
-- nodenv global 13.2.0
-- npm install --global neovim
+- nodenv global 13.2.0 npm install --global neovim
 - vim, :CheckHealthで確認
 6. sh init.sh
 7. sh dotfilesLink.sh
@@ -54,3 +53,14 @@
   - git commit: :Gcommit or \<Space>gc
   - git push: :Gpush or \<Space>gp
   - 基本的には、:Git ~をgit ~の代わりとして色々なgit処理ができる
+- winresizer
+  - 起動、Resize modeに入る: \<C-s>
+  - Resize modeに入る: r
+    - h, j, k, lでサイズを変える
+  - Focus modeに入る(単純にwindowを移動するmode)): f
+    - h, j, k, lで移動
+  - Move modeに入る(window自体を移動させるmode): m
+    - h, j, k, lで移動
+  - 終了
+    - 変更を反映して終了: <Enter>
+    - 変更を破棄して終了: q
