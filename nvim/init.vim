@@ -256,3 +256,4 @@ nnoremap <silent> <Space>gs :Gstatus<CR>
 nnoremap <silent> <Space>gw :Gwrite<CR>
 nnoremap <silent> <Space>gr :Gread<CR>
 nnoremap <silent> <Space>gc :Gcommit<CR>
+nnoremap <silent> <Space>gp :Gpush<CR>

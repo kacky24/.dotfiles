@@ -52,4 +52,5 @@
   - git blame: :Gblame or \<Space>gb
   - 変更点を表示: :Gdiff or \<Space>gd
   - git commit: :Gcommit or \<Space>gc
+  - git push: :Gpush or \<Space>gp
   - 基本的には、:Git ~をgit ~の代わりとして色々なgit処理ができる
