@@ -129,10 +129,24 @@ let g:lightline.component_type = {
 let g:lightline.active = {
   \   'left': [
   \     ['mode', 'paste'],
-  \     ['readonly', 'filename', 'modified'],
+  \     ['gitbranch', 'readonly', 'filename', 'modified'],
   \     ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok'],
   \   ]
   \ }
+let g:lightline.component_function = {
+  \   'gitbranch': 'MyFugitive'}
+
+"https://qiita.com/yuyuchu3333/items/20a0acfe7e0d0e167ccc
+function! MyFugitive()
+  try
+    if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head')
+      let _ = fugitive#head()
+      return strlen(_) ? '⭠ '._ : ''
+    endif
+  catch
+  endtry
+  return ''
+endfunction
 
 "--------------------------------------------------
 "nerdtree
