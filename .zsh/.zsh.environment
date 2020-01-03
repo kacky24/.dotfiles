@@ -12,13 +12,18 @@ export LD_LIBRARY_PATH="$HOME/local/lib64:$LD_LIBRARY_PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 # node.js
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
+export NODENV_ROOT="$HOME/.nodenv"
+if [ -d "${NODENV_ROOT}" ]; then
+    export PATH="$NODENV_ROOT/bin:$PATH"
+    eval "$(nodenv init -)"
+fi
 
 # cuda
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
@@ -28,5 +33,8 @@ export PATH="$HOME/.opt/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/.opt/lib:$LD_LIBRARY_PATH"
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+export RBENV_ROOT="$HOME/.rbenv"
+if [ -d "${RBENV_ROOT}" ]; then
+    export PATH="$RBENV_ROOT/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
