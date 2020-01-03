@@ -68,6 +68,7 @@ noremap ; :
 noremap : ;
 inoremap ; :
 inoremap : ;
+
 " j, k による移動を折り返されたテキストでも自然に振る舞うように変更
 nnoremap j gj
 nnoremap k gk
@@ -98,6 +99,22 @@ endif
 
 set viminfo='50,\"3000,:0,n~/.viminfo
 
+"--------------------------------------------------
+"tqbに関する設定
+" The prefix key.
+nnoremap    [Tag]   <Nop>
+nmap    t [Tag]
+" Tab jump
+" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
+for n in range(1, 9)
+  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
+endfor
+
+nnoremap <silent>[Tag]c :tabnew<CR>
+nnoremap <silent>[Tag]l :tabnext<CR>
+nnoremap <silent>[Tag]h :tabprevious<CR>
+nnoremap <silent>[Tag]t :tabs<CR>
+nnoremap <silent>[Tag]x :tabclose<CR>
 
 "--------------------------------------------------
 " python
