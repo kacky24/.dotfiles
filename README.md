@@ -55,6 +55,7 @@
     - カーソルを合わせてDで:Gdiffができる
     - Enterでファイル表示
     - ccで:Gcommitできる
+    - caで, git commit --amendできる
   - 今開いているソースをgit add: :Gwrite or \<Space>gw
   - 直前のコミットまで戻る(git checkout filename): :Gread or \<Space>gr
   - git blame: :Gblame or \<Space>gb
