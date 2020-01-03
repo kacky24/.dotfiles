@@ -19,12 +19,21 @@
 8. vim, :CocInstall coc-python coc-json coc-ultisnips
 
 ### vimキーバインドまとめ
+- tab周り
+  - 新規タブ作成: tc or :tabnew
+  - 右のタブへ移動: tl or :tabnext
+  - 左のタブへ移動: th or :tabprevious
+  - タブ一覧を表示: tt or :tabs
+  - タブを閉じる: tx or :tabclose
+  - 参考URL
+    - https://qiita.com/wadako111/items/755e753677dd72d8036d
 - ale
   - エラー箇所への移動: \<C-j>, \<C-k>
   - 自動補正: :ALEFix
 - nerdtree
   - 開く: \<C-e>
   - 全部更新: \<S-r>(選択ノード更新: r))
+  - ファイルを新しいタブで開く: t
 - fzf
   - :Files: ,F
   - :GFiles, git ls-files: ,f
