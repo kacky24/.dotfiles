@@ -47,7 +47,7 @@ export PAGER='less'
 if [ "$(uname)" = 'Darwin' ]; then
     export LSCOLORS=gxfxcxdxbxegedabagacad
 fi
-zstyle ':completion:*' list-colors "${LS_COLORS}"
+zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
 
 # lsでcolorを使用
 if [ "$(uname)" = 'Darwin' ]; then
