@@ -19,6 +19,11 @@
 8. vim, :CocInstall coc-python coc-json coc-ultisnips
 
 ### vimキーバインドまとめ
+- general
+  - /~とかで検索をかけた後、
+    - 次の検索ワードへの移動: n
+    - 前の検索ワードへの移動: N
+    - ハイライトを消す: :noh
 - tab周り
   - 新規タブ作成: tc or :tabnew
   - 右のタブへ移動: tl or :tabnext
