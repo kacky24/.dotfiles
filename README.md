@@ -59,6 +59,9 @@
   - モジュールのreference一覧: gr
   - 補完候補の選択の際の移動: \<C-j>, \<C-k> or \<Tab>, \<S-Tab>
     - ultisnipsによるsnippetsも同じく
+  - 補完で使用するpythonの指定
+    - :CocCommand python.setInterpreter
+    - 今は、pyenv which pythonを走らせて返ってきたpathを使うようにしているが、若干不具合が起こるかもらしい。
 - neoterm
   - terminal開く: \<C-t>
   - terminal起動時のinsert mode終了: \<C-w>
