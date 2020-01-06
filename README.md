@@ -17,6 +17,14 @@
 6. sh init.sh
 7. sh dotfilesLink.sh
 8. vim, :CocInstall coc-python coc-json coc-ultisnips
+9. powerline fontsをitermにインストール
+- https://github.com/powerline/fonts
+- コマンド
+  - git clone https://github.com/powerline/fonts.git --depth=1
+  - cd fonts
+  - ./install.sh
+  - cd ..
+  - rm -rf fonts
 
 ### vimキーバインドまとめ
 - general
