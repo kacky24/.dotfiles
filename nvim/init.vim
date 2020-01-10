@@ -266,6 +266,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 "位置とサイズ
 let g:neoterm_default_mod='belowright'
 let g:neoterm_size=10
+"--------------------------------------------------
 "画面下部にコマンド実行結果が表示
 let g:neoterm_autoscroll=1
 "C-wでターミナル内の挿入モードを抜けてウィンドウ移動
@@ -286,3 +287,9 @@ nnoremap <silent> <Space>gp :Gpush<CR>
 "--------------------------------------------------
 "winresizer
 let g:winresizer_start_key='<C-s>'
+
+"--------------------------------------------------
+"previm
+"google chromeで開く
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+nnoremap <silent> <C-p> :PrevimOpen<CR>
