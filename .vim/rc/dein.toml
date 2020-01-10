@@ -47,3 +47,6 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]  
 repo = 'simeji/winresizer'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
