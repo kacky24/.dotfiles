@@ -14,4 +14,8 @@ repo = 'vim-python/python-syntax'
 on_ft = 'python'
 
 [[plugins]]
+repo = 'previm/previm'
+on_ft =  ['markdown','mkd']
+
+[[plugins]]
 repo = 'thinca/vim-quickrun'

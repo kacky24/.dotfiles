@@ -17,6 +17,14 @@
 6. sh init.sh
 7. sh dotfilesLink.sh
 8. vim, :CocInstall coc-python coc-json coc-ultisnips
+9. powerline fontsをitermにインストール
+- https://github.com/powerline/fonts
+- コマンド
+  - git clone https://github.com/powerline/fonts.git --depth=1
+  - cd fonts
+  - ./install.sh
+  - cd ..
+  - rm -rf fonts
 
 ### vimキーバインドまとめ
 - general
@@ -51,6 +59,9 @@
   - モジュールのreference一覧: gr
   - 補完候補の選択の際の移動: \<C-j>, \<C-k> or \<Tab>, \<S-Tab>
     - ultisnipsによるsnippetsも同じく
+  - 補完で使用するpythonの指定
+    - :CocCommand python.setInterpreter
+    - 今は、pyenv which pythonを走らせて返ってきたpathを使うようにしているが、若干不具合が起こるかもらしい。
 - neoterm
   - terminal開く: \<C-t>
   - terminal起動時のinsert mode終了: \<C-w>
@@ -79,3 +90,5 @@
   - 終了
     - 変更を反映して終了: \<Enter>
     - 変更を破棄して終了: q
+- previm
+  - chromeで起動: <C-p>
