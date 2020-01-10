@@ -293,3 +293,12 @@ let g:winresizer_start_key='<C-s>'
 "google chromeで開く
 let g:previm_open_cmd = 'open -a Google\ Chrome'
 nnoremap <silent> <C-p> :PrevimOpen<CR>
+
+"--------------------------------------------------
+"quickrun
+let g:quickrun_config = {
+\   "_" : {
+\       "outputter/buffer/split" : ":botright 10sp",
+\       "outputter/buffer/close_on_empty" : 1
+\   },
+\}
