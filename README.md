@@ -92,3 +92,5 @@
     - 変更を破棄して終了: q
 - previm
   - chromeで起動: \<C-p>
+- quickrun
+  - 現在のファイル実行: \<Leader>r
