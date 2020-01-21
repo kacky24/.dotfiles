@@ -44,9 +44,10 @@ export PAGER='less'
 
 ##########color##########
 # 補完でcolorを使用
+# http://neko-mac.blogspot.com/2015/03/mac_18.html
 if [ "$(uname)" = 'Darwin' ]; then
     export LSCOLORS=gxfxcxdxbxegedabagacad
-    zstyle ':completion:*' list-colors ${(s.:.)LSCOLORS}
+    zstyle ':completion:*:default' list-colors di=36 ln=35 ex=31
 else
     zstyle ':completion:*' list-colors "${LS_COLORS}"
 fi
