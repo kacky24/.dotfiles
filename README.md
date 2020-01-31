@@ -12,7 +12,8 @@
 4. nodenvをインストール
 - https://yu8mada.com/2018/08/03/how-to-install-neovim-on-macos-using-homebrew-and-set-it-up-to-make-it-able-to-be-used/#content-4-3
 - nodenv install 13.2.0
-- nodenv global 13.2.0 npm install --global neovim
+- nodenv global 13.2.0
+- npm install --global neovim
 - vim, :CheckHealthで確認
 6. sh init.sh
 7. sh dotfilesLink.sh
@@ -36,6 +37,12 @@
     - 次の検索ワードへの移動: n
     - 前の検索ワードへの移動: N
     - ハイライトを消す: :noh
+  - 移動周り
+    - 参考URL: https://qiita.com/takeharu/items/9d1c3577f8868f7b07b5
+    - 文末移動: $
+    - 文頭移動: ^
+    - 段落ごとに上へ: {
+    - 段落ごとに下へ: }
 - tab周り
   - 新規タブ作成: tc or :tabnew
   - 右のタブへ移動: tl or :tabnext
