@@ -59,3 +59,6 @@ if [ "$(uname)" = 'Darwin' ]; then
 else
     alias ls='ls --color=auto'
 fi
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

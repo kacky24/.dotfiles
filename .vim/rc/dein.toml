@@ -36,6 +36,7 @@ repo = 'kassio/neoterm'
 [[plugins]]  
 repo = 'junegunn/fzf'  
 build = './install --bin'  
+path = '~/.fzf'
 merged = '0'
 
 [[plugins]]  
