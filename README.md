@@ -1,6 +1,7 @@
 # dotfiles
 ### セットアップ手順
 1. neovimインストール, zshに変更
+- nvim install url: https://github.com/neovim/neovim/wiki/Installing-Neovim
 2. git colne
 - git clone --recursive https://github.com/kacky24/.dotfiles.git
 3. pyenvをインストール
@@ -10,6 +11,7 @@
 - neovim3で、flake8, flake8-import-order, isort, jedi, black
 - vim, :CheckHealthで確認
 4. nodenvをインストール
+- https://qiita.com/YuukiMiyoshi/items/080b6cde332d8d4e06f3
 - https://yu8mada.com/2018/08/03/how-to-install-neovim-on-macos-using-homebrew-and-set-it-up-to-make-it-able-to-be-used/#content-4-3
 - nodenv install 13.2.0
 - nodenv global 13.2.0
