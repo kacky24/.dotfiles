@@ -18,6 +18,9 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
 # node.js
 export NODENV_ROOT="$HOME/.nodenv"
 if [ -d "${NODENV_ROOT}" ]; then
