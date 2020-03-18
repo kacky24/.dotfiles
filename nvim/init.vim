@@ -195,8 +195,9 @@ highlight GitGutterDelete guifg=#ff0000 ctermfg=9
 "ale
 "checkのタイミング
 let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 1
 "color
 highlight ALEWarningSign guifg=#ffff00 ctermfg=11
 highlight ALEErrorSign guibg=#ff0000 ctermbg=9
