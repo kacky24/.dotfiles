@@ -240,6 +240,18 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "enterで補完を確定
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+"補完で使用するpythonを自動指定	
+"参考: https://github.com/neoclide/coc-python/issues/55	
+if isdirectory(expand("./.venv"))
+    call coc#config('python', {	
+    \    'pythonPath': split(execute('!poetry run which python'), '\n')[-1]	
+    \ })
+elseif isdirectory(expand("~/.pyenv"))	
+    call coc#config('python', {	
+    \    'pythonPath': split(execute('!pyenv which python'), '\n')[-1]	
+    \ })
+endif
+
 "--------------------------------------------------
 "ultisnips
 "
