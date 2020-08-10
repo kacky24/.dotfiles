@@ -288,6 +288,8 @@ nnoremap <silent> <Space>gw :Gwrite<CR>
 nnoremap <silent> <Space>gr :Gread<CR>
 nnoremap <silent> <Space>gc :Gcommit<CR>
 nnoremap <silent> <Space>gp :Gpush<CR>
+nnoremap <silent> <Space>gh :diffget //2<CR>
+nnoremap <silent> <Space>gl :diffget //3<CR>
 
 "--------------------------------------------------
 "winresizer

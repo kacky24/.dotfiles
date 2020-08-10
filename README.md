@@ -91,6 +91,9 @@
   - 直前のコミットまで戻る(git checkout filename): :Gread or \<Space>gr
   - git blame: :Gblame or \<Space>gb
   - 変更点を表示: :Gdiff or \<Space>gd
+    - conflict時にtarget(左)の方を採用: diffget //2 or \<Space>gh
+    - conflict時にmerged(右)の方を採用: diffget //3 or \<Space>gl
+    - https://medium.com/prodopsio/solving-git-merge-conflicts-with-vim-c8a8617e3633
   - git commit: :Gcommit or \<Space>gc
   - git push: :Gpush or \<Space>gp
   - 基本的には、:Git ~をgit ~の代わりとして色々なgit処理ができる
