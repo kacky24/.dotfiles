@@ -51,6 +51,7 @@ set expandtab
 set autoindent
 set wildmenu
 set backspace=indent,eol,start
+set clipboard=unnamed
 
 
 "--------------------------------------------------
