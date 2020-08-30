@@ -51,6 +51,7 @@ set expandtab
 set autoindent
 set wildmenu
 set backspace=indent,eol,start
+set clipboard=unnamed
 
 
 "--------------------------------------------------
@@ -195,8 +196,9 @@ highlight GitGutterDelete guifg=#ff0000 ctermfg=9
 "ale
 "checkのタイミング
 let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 1
 "color
 highlight ALEWarningSign guifg=#ffff00 ctermfg=11
 highlight ALEErrorSign guibg=#ff0000 ctermbg=9
@@ -239,11 +241,15 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "enterで補完を確定
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-"補完で使用するpythonを自動指定
-"参考: https://github.com/neoclide/coc-python/issues/55
-if isdirectory(expand("~/.pyenv"))
-    call coc#config('python', {
-    \    'pythonPath': split(execute('!pyenv which python'), '\n')[-1]
+"補完で使用するpythonを自動指定	
+"参考: https://github.com/neoclide/coc-python/issues/55	
+if isdirectory(expand("./.venv"))
+    call coc#config('python', {	
+    \    'pythonPath': split(execute('!poetry run which python'), '\n')[-1]	
+    \ })
+elseif isdirectory(expand("~/.pyenv"))	
+    call coc#config('python', {	
+    \    'pythonPath': split(execute('!pyenv which python'), '\n')[-1]	
     \ })
 endif
 
@@ -283,6 +289,8 @@ nnoremap <silent> <Space>gw :Gwrite<CR>
 nnoremap <silent> <Space>gr :Gread<CR>
 nnoremap <silent> <Space>gc :Gcommit<CR>
 nnoremap <silent> <Space>gp :Gpush<CR>
+nnoremap <silent> <Space>gh :diffget //2<CR>
+nnoremap <silent> <Space>gl :diffget //3<CR>
 
 "--------------------------------------------------
 "winresizer

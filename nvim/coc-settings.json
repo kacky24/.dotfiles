@@ -1,7 +1,8 @@
 {
     "python.analysis.diagnosticEnabled": false,
-    "python.linting.enable": false,
+    "python.linting.enabled": false,
     "python.linting.pylintEnabled": false,
+<<<<<<< HEAD
     "python.jediPath": "~/.pyenv/versions/neovim3/lib/python3.7/site-packages/",
     "languageserver": {
         "swift": {
@@ -9,4 +10,7 @@
             "filetypes":["swift"]
         }
     }
+=======
+    "python.jediPath": "~/.pyenv/versions/neovim3/lib/python3.7/site-packages",
+>>>>>>> 9c7545fade0ca34cb952725b6d77a8cc90b8214e
 }
