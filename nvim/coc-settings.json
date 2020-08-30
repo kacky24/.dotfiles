@@ -3,4 +3,10 @@
     "python.linting.enable": false,
     "python.linting.pylintEnabled": false,
     "python.jediPath": "~/.pyenv/versions/neovim3/lib/python3.7/site-packages/",
+    "languageserver": {
+        "swift": {
+            "command": "sourcekit-lsp",
+            "filetypes":["swift"]
+        }
+    }
 }
