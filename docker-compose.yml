@@ -4,15 +4,21 @@ services:
     app:
         container_name: my_env
         image: kacky24/my_env
-        working_dir: /usr/src/app
+        working_dir: /app
         volumes:
-            - ./:/usr/src/app
+            - ./:/app
+        ports:
+            - "8888:8888"
+            - "10088:10088"
         cap_add:
             - SYS_ADMIN
+        security_opt:
+            - apparmor:unconfined
         devices:
             - /dev/fuse
         networks:
             - app_net
+        tty: true
 
 networks:
     app_net:
