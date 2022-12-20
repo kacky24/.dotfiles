@@ -1,5 +1,9 @@
 FROM ubuntu:18.04
 
+ARG PYTHON3_VERSION=3.9.9
+ARG PYTHON2_VERSION=2.7.16
+ARG NODE_VERSION=19.2.0
+
 ENV HOME /root
 ENV PYENV_ROOT $HOME/.pyenv
 ENV PATH $PYENV_ROOT/bin:$PATH
@@ -45,23 +49,23 @@ RUN curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appi
 
 RUN git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
     eval "$(pyenv init -)" && \
-    pyenv install 3.7.4 && \
-    pyenv install 2.7.16
+    pyenv install $PYTHON3_VERSION && \
+    pyenv install $PYTHON2_VERSION
 
 RUN git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv && \
     eval "$(pyenv virtualenv-init -)" && \
-    pyenv virtualenv 2.7.16 neovim2 && \
-    pyenv virtualenv 3.7.4 neovim3 && \
+    pyenv virtualenv $PYTHON2_VERSION neovim2 && \
+    pyenv virtualenv $PYTHON3_VERSION neovim3 && \
     pyenv local neovim2 && \
-    ~/.pyenv/versions/2.7.16/bin/pip install pynvim && \
+    ~/.pyenv/versions/${PYTHON2_VERSION}/bin/pip install pynvim && \
     pyenv local neovim3 && \
-    ~/.pyenv/versions/3.7.4/bin/pip install pynvim flake8 flake8-import-order isort jedi black
+    ~/.pyenv/versions/${PYTHON3_VERSION}/bin/pip install pynvim flake8 flake8-import-order isort jedi black
 
 RUN git clone git://github.com/nodenv/nodenv.git ~/.nodenv && \
     git clone git://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build && \
     eval "$(nodenv init -)" && \
-    nodenv install 13.2.0 && \
-    nodenv global 13.2.0 && \
+    nodenv install $NODE_VERSION && \
+    nodenv global $NODE_VERSION && \
     npm install --global neovim
 
 RUN git clone --recursive https://github.com/kacky24/.dotfiles.git && \
