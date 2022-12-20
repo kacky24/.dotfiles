@@ -129,7 +129,7 @@ let g:python_highlight_class_vars = 1
 "--------------------------------------------------
 " node
 "
-let g:node_host_prog = expand('~/.nodenv/versions/13.2.0/bin/neovim-node-host')
+let g:node_host_prog = expand('~/.nodenv/versions/19.2.0/bin/neovim-node-host')
 
 "--------------------------------------------------
 "lightline
@@ -236,8 +236,6 @@ function! s:show_documentation()
 endfunction
 
 "tab, shift+tabで候補を上下
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "enterで補完を確定
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
@@ -311,3 +309,12 @@ let g:quickrun_config = {
 \       "outputter/buffer/close_on_empty" : 1
 \   },
 \}
+
+"--------------------------------------------------
+"copilot
+let g:copilot#enable = 1
+let g:copilot#enable_default = 1
+imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+imap <silent> <C-l> <Plug>(copilot-next)
+imap <silent> <C-h> <Plug>(copilot-previous)
