@@ -236,6 +236,8 @@ function! s:show_documentation()
 endfunction
 
 "tab, shift+tabで候補を上下
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "enterで補完を確定
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
