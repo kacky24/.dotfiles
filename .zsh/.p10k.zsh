@@ -57,6 +57,7 @@
       direnv                  # direnv status (https://direnv.net/)
       # virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
       # anaconda                # conda environment (https://conda.io/)
+      asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
       pyenv                   # python environment (https://github.com/pyenv/pyenv)
       goenv                   # go environment (https://github.com/syndbg/goenv)
       nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
@@ -100,6 +101,7 @@
   #
   # To remove trailing space from all default icons, set POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION
   # to '${P9K_VISUAL_IDENTIFIER% }'.
+
   #
   # To enable default icons for one segment (e.g., dir), set
   # POWERLEVEL9K_DIR_VISUAL_IDENTIFIER_EXPANSION='${P9K_VISUAL_IDENTIFIER}'.
@@ -256,6 +258,7 @@
     .hg
     .node-version
     .python-version
+    .tool-versions
     .ruby-version
     .shorten_folder_marker
     .svn
@@ -628,6 +631,25 @@
   typeset -g POWERLEVEL9K_ANACONDA_{LEFT,RIGHT}_DELIMITER=
   # Custom icon.
   # typeset -g POWERLEVEL9K_ANACONDA_VISUAL_IDENTIFIER_EXPANSION='⭐'
+
+  #####################[ asdf version manager (https://github.com/asdf-vm/asdf) ]######################
+  # Uncomment to hide system version
+  POWERLEVEL9K_ASDF_SHOW_SYSTEM=false
+
+  # Uncomment to show versions that are the same as global
+  # POWERLEVEL9K_ASDF_PROMPT_ALWAYS_SHOW=true
+
+  # Uncomment to show only relevant tools on prompt
+  POWERLEVEL9K_ASDF_SHOW_ON_UPGLOB=true
+
+  # Improves asdf plugin glob patterns
+  POWERLEVEL9K_ASDF_RUBY_SHOW_ON_UPGLOB='*.rb|Gemfile|Rakefile|.bundle'
+  POWERLEVEL9K_ASDF_PYTHON_SHOW_ON_UPGLOB='*.py|pyproject.*'
+  POWERLEVEL9K_ASDF_GOLANG_SHOW_ON_UPGLOB='*.go|go.mod'
+  POWERLEVEL9K_ASDF_NODEJS_SHOW_ON_UPGLOB='package.json|yarn.lock|*.js'
+  POWERLEVEL9K_ASDF_RUST_SHOW_ON_UPGLOB='Cargo.*|*.rs'
+  POWERLEVEL9K_ASDF_PHP_SHOW_ON_UPGLOB='*.php'
+  POWERLEVEL9K_ASDF_YARN_SHOW_ON_UPGLOB='package.json|yarn.lock'
 
   ################[ pyenv: python environment (https://github.com/pyenv/pyenv) ]################
   # Pyenv color.
