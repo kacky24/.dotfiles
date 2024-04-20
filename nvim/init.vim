@@ -120,8 +120,8 @@ nnoremap <silent>[Tag]x :tabclose<CR>
 "--------------------------------------------------
 " python
 "
-let g:python_host_prog = expand('~/.pyenv/versions/neovim2/bin/python')
-let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
+"let g:python_host_prog = expand('~/.pyenv/versions/neovim2/bin/python')
+let g:python3_host_prog = expand('~/.asdf/installs/python/3.12.3/bin/python')
 "vim-python/python-syntaxによる設定
 "self, clsを色付け
 let g:python_highlight_class_vars = 1
@@ -129,7 +129,7 @@ let g:python_highlight_class_vars = 1
 "--------------------------------------------------
 " node
 "
-let g:node_host_prog = expand('~/.nodenv/versions/19.2.0/bin/neovim-node-host')
+"let g:node_host_prog = expand('~/.asdf/installs/nodejs/21.7.3/bin/node')
 
 "--------------------------------------------------
 "lightline
