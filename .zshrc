@@ -62,3 +62,12 @@ fi
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+##########git alias##########
+alias g='git'
+alias ga='git add'
+alias gd='git diff'
+alias gc='git commit'
+alias gs='git status'
+alias gp='git push'
+alias gco='git checkout'
