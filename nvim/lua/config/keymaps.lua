@@ -1,16 +1,4 @@
 --------------------------------------------------------
---編集に関する設定
-vim.opt.number = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.encoding = 'utf-8'
-vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.wildmenu = true
-vim.opt.backspace = {'indent','eol','start'}
-vim.opt.clipboard = 'unnamed'
-
---------------------------------------------------------
 --キーに関する設定
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('i', '{', '{}<Left>', { noremap = true, silent = false })
@@ -31,17 +19,6 @@ vim.api.nvim_set_keymap('i', ':', ';', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true, silent = false })
---ビープ音を消す
-vim.opt.vb.t_vb = ''
-vim.opt.errorbells = false
-
-vim.cmd('filetype off')
-
-vim.cmd('filetype plugin indent on')
-vim.cmd('syntax enable')
-
-
-vim.opt.termguicolors = true
 
 --copy $ pasteに関する設定
 -- Execute 'uname' and store the result in OSTYPE
@@ -64,8 +41,6 @@ if OSTYPE == 'Linux' then
   vim.api.nvim_set_keymap('i', 'p', ':rv!<CR>p', { noremap = true, silent = false })
 end
 
-vim.opt.viminfo = "'50,\"3000,:0,n~/.viminfo"
-
 --------------------------------------------------------
 --tabに関する設定
 --the prefix key
@@ -82,13 +57,6 @@ vim.api.nvim_set_keymap('n', '[Tag]l', ':tabnext<CR>', { noremap = true, silent 
 vim.api.nvim_set_keymap('n', '[Tag]h', ':tabprevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '[Tag]t', ':tabs<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '[Tag]x', ':tabclose<CR>', { noremap = true, silent = true })
-
---------------------------------------------------------
---python
-vim.g.python3_host_prog = vim.fn.expand('~/.asdf/installs/python/3.12.3/bin/python')
---vim-python/python-syntaxによる設定
---self, clsを色付け
-vim.g.python_highlight_class_vars = 1
 
 --------------------------------------------------------
 --window

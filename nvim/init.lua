@@ -1,5 +1,8 @@
-require('keymaps')
+require('config/options')
+require('config/options')
+require('config/keymaps')
+require('config/autocmds')
 
 if not vim.g.vscode then
-   require('lazy_nvim')
+   require('config/lazy_nvim')
 end
