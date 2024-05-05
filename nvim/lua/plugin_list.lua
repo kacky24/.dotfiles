@@ -1,11 +1,10 @@
 local plugins = {
-    'ale',
-    'nerdtree',
+    --'ale',
     'molokai',
+    'nvimtree',
     'lightline',
     'lightline-ale',
     'vim-gitgutter',
-    'coc',
     'ultisnips',
     'vim-snippets',
     'neoterm',
@@ -15,11 +14,15 @@ local plugins = {
     'winresizer',
     'vim-quickrun',
     'copilot',
+    'copilotchat',
     'remote-nvim',
-    'noice',
+    --'noice',
     'vim-toml',
     'python-syntax',
     'previm',
+    'mason-lspconfig',
+    'lspsaga',
+    'nvim-cmp',
 }
 
 return plugins

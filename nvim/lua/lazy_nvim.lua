@@ -17,7 +17,7 @@ local plugins = utils.array_map(
     require('plugin_list'),
     function(plugin)
         return require('plugins/' .. plugin)
-  end
+    end
 )
 
 require("lazy").setup(plugins)
