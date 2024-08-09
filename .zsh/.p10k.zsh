@@ -637,7 +637,7 @@
   POWERLEVEL9K_ASDF_SHOW_SYSTEM=false
 
   # Uncomment to show versions that are the same as global
-  # POWERLEVEL9K_ASDF_PROMPT_ALWAYS_SHOW=true
+  POWERLEVEL9K_ASDF_PROMPT_ALWAYS_SHOW=true
 
   # Uncomment to show only relevant tools on prompt
   POWERLEVEL9K_ASDF_SHOW_ON_UPGLOB=true
