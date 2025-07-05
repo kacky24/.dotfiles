@@ -1,0 +1,48 @@
+ {
+    "permissions": {
+      "allow": [
+        "WebFetch",
+        "WebSearch",
+        "Read",
+        "Glob",
+        "Grep",
+        "LS"
+      ],
+      "deny": [
+        "Read(.env)",
+        "Read(*.key)",
+        "Read(*.pem)",
+        "Read(*_rsa)",
+        "Read(*_ecdsa)",
+        "Read(*_ed25519)",
+        "Read(*.p12)",
+        "Read(*.pfx)",
+        "Read(.aws/credentials)",
+        "Read(.ssh/id_*)",
+        "Read(.npmrc)",
+        "Read(.pypirc)",
+        "Read(config.json)",
+        "Read(secrets.json)",
+        "Read(**/credentials*)",
+        "Read(**/secret*)",
+        "Bash(curl:*)",
+        "Bash(wget:*)",
+        "Bash(nc:*)",
+        "Bash(netcat:*)",
+        "Bash(ssh:*)",
+        "Bash(scp:*)",
+        "Bash(rsync:*)",
+        "Bash(sudo:*)",
+        "Bash(rm -rf:*)",
+        "Bash(chmod 777:*)",
+        "Bash(chown:*)",
+        "Bash(mount:*)",
+        "Bash(umount:*)"
+      ]
+    },
+    "co_authored_commits": true,
+    "cleanupPeriodDays": 30,
+    "BASH_DEFAULT_TIMEOUT_MS": 600000,
+    "BASH_MAX_TIMEOUT_MS": 600000,
+    "MCP_TOOL_TIMEOUT": 600000
+  }
