@@ -61,3 +61,11 @@ vim.api.nvim_set_keymap('n', '[Tag]x', ':tabclose<CR>', { noremap = true, silent
 --------------------------------------------------------
 --window
 vim.g.winresizer_start_key = '<C-s>'
+
+--------------------------------------------------------
+--bufferline
+vim.api.nvim_set_keymap('n', '<Tab>', '<cmd>BufferLineCycleNext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bd', '<cmd>bdelete<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bp', '<cmd>BufferLinePickClose<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bo', '<cmd>BufferLineCloseOthers<CR>', { noremap = true, silent = true })

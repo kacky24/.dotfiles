@@ -23,6 +23,7 @@ local plugins = {
     'mason-lspconfig',
     'lspsaga',
     'nvim-cmp',
+    'bufferline',
 }
 
 return plugins
